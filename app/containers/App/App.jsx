@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { MyComponent } from '../../components';
-
 import './App.css';
 
 console.log( __DEV__ );
@@ -11,15 +9,13 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <MyComponent />
-        <p>
-          containers
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <p> content from App Component </p>
+      {this.props.children}
+    </div>
+  );
+ }
 }
 
 export default App;
