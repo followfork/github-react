@@ -3,3 +3,5 @@
 react-router  history  没有写入到package.json 
 
 sudo npm install npm -g
+
+https://zhuanlan.zhihu.com/p/20361937
