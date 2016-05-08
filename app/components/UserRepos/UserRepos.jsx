@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class UserRepos extends Component {
+  static propTypes = {
+    username: PropTypes.string.isRequired,
+    repos: PropTypes.array.isRequired
+  }
   render(){
     return (
       <div>
