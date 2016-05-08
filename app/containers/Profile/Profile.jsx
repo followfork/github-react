@@ -15,7 +15,7 @@ class Profile extends Component {
   }
   componentDidMount() {
     // 为了读写数据，我们首先创建一个firebase数据库的引用
-    this.ref = new Firebase('https://github-react.firebaseio.com/');
+    this.ref = new Firebase('https://github-note-taker.firebaseio.com/');
     // 调用child来往引用地址后面追加请求，获取数据
     var childRef = this.ref.child(this.props.params.username);
     // 将获取的数据转换成数组并且赋给this.state.notes
