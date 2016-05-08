@@ -3,6 +3,7 @@ import { UserProfile, UserRepos, Notes } from '../../components'
 import { mixin } from 'core-decorators';
 import ReactFireMixin from 'reactfire';
 import Firebase from 'firebase';
+import getGithubInfo from '../../util/helper';
 
 @mixin(ReactFireMixin)
 class Profile extends Component {
@@ -20,6 +21,19 @@ class Profile extends Component {
     var childRef = this.ref.child(this.props.params.username);
     // 将获取的数据转换成数组并且赋给this.state.notes
     this.bindAsArray(childRef, 'notes');  
+
+    //判断username是否为空
+
+     getGithubInfo( this.props.params.username )
+      .then( ( data ) => {
+        // 测试一下传入用户名后返回的数据
+        console.log( data );
+        // 更新state数据
+        this.setState({
+          bio: data.bio,
+          repos: data.repos
+        })
+      });
   }
   // componentWillUnMount(){
   //   this.unbind('notes');

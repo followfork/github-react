@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import NoteList from './NoteList.jsx';
 
 export default class Notes extends Component {
-  static propTypes = {
-    username: PropTypes.string.isRequired,
-    notes: PropTypes.array.isRequired
-  }
+  // static propTypes = {
+  //   username: PropTypes.string.isRequired,
+  //   notes: PropTypes.array.isRequired
+  // }
   render(){
   	// console.log('notes:', this.props.notes);
     return (

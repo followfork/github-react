@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 export default class UserProfile extends Component {
-   static propTypes = {
-    username: PropTypes.string.isRequired,
-    bio: PropTypes.object.isRequired
-  }
+  //  static propTypes = {
+  //   username: PropTypes.string.isRequired,
+  //   bio: PropTypes.object.isRequired
+  // }
   render(){
     return (
       <div> 
